@@ -1,0 +1,18 @@
+export const ptBr = {
+  logo_image_alt: "Vitor Lichoti",
+  nav_projects: "projetos",
+  nav_text_about: "sobre",
+  nav_text_contact: "contato",
+  menu_text_language: "idioma",
+  menu_text_dark_theme: "Tema escuro",
+  menu_text_light_theme: "Tema claro",
+  hero_title: "Vitor Lichoti",
+  hero_subtitle: "Desenvolvendo soluções para a web/mobile e sistemas desde 2021",
+  projects_section_title: "Projetos",
+  projects_section_all_projects: "Todos",
+  projects_section_frontend: "Frontend",
+  projects_section_backend: "Backend",
+  projects_section_fullstack: "Fullstack",
+  projects_section_search_placeholder: "Buscar por linguagem ou ferramenta",
+  footer_rights: "© Todos os direitos reservados",
+}

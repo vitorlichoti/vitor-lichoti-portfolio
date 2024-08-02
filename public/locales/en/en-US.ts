@@ -1,0 +1,18 @@
+export const enUS = {
+  logo_image_alt: "Vitor Lichoti",
+  nav_projects: "projects",
+  nav_text_about: "about",
+  nav_text_contact: "contact",
+  menu_text_language: "language",
+  menu_text_dark_theme: "Dark Theme",
+  menu_text_light_theme: "Light Theme",
+  hero_title: "Vitor Lichoti",
+  hero_subtitle: "Developing web/mobile solutions and systems since 2021",
+  projects_section_title: "Projects",
+  projects_section_all_projects: "All",
+  projects_section_frontend: "Frontend",
+  projects_section_backend: "Backend",
+  projects_section_fullstack: "Fullstack",
+  projects_section_search_placeholder: "Search by language or tool",
+  footer_rights: "© All rights reserved",
+}
