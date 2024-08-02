@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Inter, Cormorant_Garamond } from "next/font/google";
+import { Inter, Cormorant_Garamond, Poppins } from "next/font/google";
 import "./globals.css";
 
 // const inter = Inter({ subsets: ["latin"] });
-const cormorantGaramond = Cormorant_Garamond({ subsets: ["latin"], weight: ["300", "400", "500", "600", "700"] });
+// const cormorantGaramond = Cormorant_Garamond({ subsets: ["latin"], weight: ["300", "400", "500", "600", "700"] });
+const poppins = Poppins({ subsets: ["latin"], weight: ["300", "400", "500", "600", "700"] });
 
 export const metadata: Metadata = {
   title: "Vitor Lichoti",
@@ -17,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-Br">
-      <body className={cormorantGaramond.className}>{children}</body>
+      <body className={poppins.className}>{children}</body>
     </html>
   );
 }

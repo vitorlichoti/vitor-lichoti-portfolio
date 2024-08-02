@@ -28,7 +28,7 @@ export default function Header() {
         style={{position: 'absolute', left: 0, top: 0, zIndex: -1}}
         layout="fill"
         objectFit="cover"
-        className="opacity-80"
+        className="opacity-70"
       />
     </header>
   );

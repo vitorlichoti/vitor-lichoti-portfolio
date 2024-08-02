@@ -7,7 +7,7 @@ export const ptBr = {
   menu_text_dark_theme: "Tema escuro",
   menu_text_light_theme: "Tema claro",
   hero_title: "Vitor Lichoti",
-  hero_subtitle: "Desenvolvendo soluções para a web/mobile e sistemas desde 2021",
+  hero_subtitle: "Desenvolvendo soluções web/mobile e sistemas desde 2021",
   projects_section_title: "Projetos",
   projects_section_all_projects: "Todos",
   projects_section_frontend: "Frontend",

@@ -8,7 +8,7 @@ export const textLang = {
     menu_text_dark_theme: "Tema escuro",
     menu_text_light_theme: "Tema claro",
     hero_title: "Vitor Lichoti",
-    hero_subtitle: "Desenvolvendo soluções para a web/mobile e sistemas desde 2021.",
+    hero_subtitle: "Desenvolvendo soluções web/mobile e sistemas desde 2021.",
     hero_image_alt: "Paisagem com cavalo e árvores",
     projects_section_title: "Projetos",
     projects_section_all_projects: "Todos",

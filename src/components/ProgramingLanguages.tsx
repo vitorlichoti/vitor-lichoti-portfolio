@@ -1,24 +1,40 @@
-import golang from '../../public/golang.svg'
-import kotlin from '../../public/kotlin.svg'
-import next from '../../public/next.svg'
-import react from '../../public/react.svg'
-import python from '../../public/python.svg'
-import reactNative from '../../public/react-native.svg'
-import typescript from '../../public/typescript.svg'
-import kotlinMultiplatform from '../../public/kotlin-multiplatform.svg'
+'use client'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Image from 'next/image';
 
-import Image from 'next/image'
+import AliceCarousel from 'react-alice-carousel';
+import 'react-alice-carousel/lib/alice-carousel.css';
+import { useEffect, useState } from "react";
 
-export default function ProgramingLanguages() {
-  const languages = ['Golang', 'Kotlin', 'Next.js', 'React.js', 'Python', 'React Native', 'TypeScript', 'Kotlin Multiplatform']
-  return (
-    <>
-      {languages.map((language, index) => (
-        <div key={index} className=''>
-          <Image src={language} alt={language} width={100} height={100} />
-          <p className='text-yellow-100 opacity-70'>{language}</p>
+export default function ProgrammingLanguages() {
+  const mode = 'dark';
+  const languagesList = ['TypeScript', 'Python', 'Kotlin', 'Kotlin Multiplatform', 'React', 'React Native', 'Next', 'Golang' ];
+  const [waitSec, setWaitSec] = useState<string[]>([]);
+
+  useEffect(() => {
+    setWaitSec(languagesList);
+  }, []);
+                                         
+  return (            
+    <AliceCarousel    
+      autoPlay
+      autoPlayInterval={2000}
+      infinite
+      disableButtonsControls
+      disableDotsControls
+      responsive={
+          {
+            0: { items: 1 },
+            1024: { items: 6 }
+          }
+      }
+      items={waitSec?.map((language, index) => (
+        <div key={index} style={{ height: '46px', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '5px' }}>
+          <Image src={`/assets/${mode}/${language.toLowerCase().replace(' ', '-')}.png`} alt={language} width={36} height={36} />
+          <div className='text-xl text-yellow-100 opacity-60'>{language}</div>
         </div>
       ))}
-    </>
-  )
+    />
+  );
 }
