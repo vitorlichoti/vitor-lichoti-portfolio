@@ -6,10 +6,11 @@ import Image from 'next/image';
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 import { useEffect, useState } from "react";
+import { languagesList } from '../common/constants';
 
 export default function ProgrammingLanguages() {
   const mode = 'dark';
-  const languagesList = ['TypeScript', 'Python', 'Kotlin', 'Kotlin Multiplatform', 'React', 'React Native', 'Next', 'Golang' ];
+
   const [waitSec, setWaitSec] = useState<string[]>([]);
 
   useEffect(() => {
