@@ -6,6 +6,7 @@ import samurai from "../../public/samurai.png";
 import { textLang } from "../../public/locales/global";
 import ProgramingLanguages from "@/components/ProgramingLanguages";
 import ProjectFiltersWrapper from "@/components/ProjectFiltersWrapper";
+import Projects from "@/components/Projects";
 
 export default function Home() {
   
@@ -29,7 +30,7 @@ export default function Home() {
         </div>
 
       </main>
-      <section className="ml-20 mr-20 mt-16">
+      <section className="ml-20 mr-20 mt-10">
         <ProgramingLanguages />
       </section>
       <section className="ml-20 mr-20 mt-40"> 
@@ -40,7 +41,7 @@ export default function Home() {
         </div>
 
         <div>
-          <ProjectFiltersWrapper />
+          <Projects />
         </div>
       </section>
     </div>

@@ -1,7 +1,10 @@
 import RadioButton from "./RadioButton";
+import { FilterParams } from "./Projects";
+import { Dispatch, SetStateAction } from "react";
 
 interface RadioButtonProps {
   label: string[];
+  changeFilterParams: Dispatch<SetStateAction<FilterParams>>;
 }
 
 export default function RadioButtonsFilter({ label }: RadioButtonProps) {
