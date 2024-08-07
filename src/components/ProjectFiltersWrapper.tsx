@@ -18,7 +18,7 @@ export default function ProjectFiltersWrapper({ setFilterParams }: ProjectFilter
   return (
     <div className="mt-10" style={{display: 'flex', justifyContent: 'space-between', marginLeft: 'auto', marginRight: 'auto', width: '100%'}}>
       <RadioButtonsFilter label={stacks} changeFilterParams={setFilterParams} />
-      <SelectByFrameWork />
+      <SelectByFrameWork changeFilterParams={setFilterParams} />
     </div>
   );
 }

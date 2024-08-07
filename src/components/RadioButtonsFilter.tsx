@@ -7,11 +7,12 @@ interface RadioButtonProps {
   changeFilterParams: Dispatch<SetStateAction<FilterParams>>;
 }
 
-export default function RadioButtonsFilter({ label }: RadioButtonProps) {
+export default function RadioButtonsFilter({ label, changeFilterParams }: RadioButtonProps) {
+  
   return (
     <div style={{width: 'auto', display: 'flex', justifyContent: 'center', gap: '20px'}}>
       {label.map((item, index) => (
-        <RadioButton key={index} label={item} />
+        <RadioButton key={index} label={item} changeFilterParams={changeFilterParams}/>
       ))}
     </div>
   );

@@ -18,7 +18,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           </div>
         </div>
         <div>
-          <Image src={project.backgroundImage} alt="project" className="w-20 h-20 rounded-full" />
+          <Image src={''} alt="project" className="w-20 h-20 rounded-full" />
         </div>
       </div>
       <p className="text-white mt-2">{project.description}</p>
