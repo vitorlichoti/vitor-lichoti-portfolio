@@ -7,17 +7,17 @@ interface RadioButtonProps {
 }
 
 export default function RadioButton({ label, changeFilterParams }: RadioButtonProps) {
-  const handleSelectedRadio = (e: React.MouseEvent<HTMLInputElement, MouseEvent>) => {
+  const handleChangeRadio = (e: React.MouseEvent<HTMLInputElement, MouseEvent>) => {
     const target = e.target as HTMLInputElement;
     changeFilterParams((prev) => ({
       ...prev,
       stack: target.value
     }));
   }
-  
+
   return (
     <label >
-      <input onClick={(e) => handleSelectedRadio(e)} type="radio" name="language" value={label === 'Todos' ? '' : label} style={{marginRight: '5px'}} />
+      <input onClick={(e) => handleChangeRadio(e)} type="radio" name="language" value={label === 'Todos' ? '' : label} style={{marginRight: '5pxgit a'}} />
       {label}
     </label>
   );

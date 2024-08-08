@@ -17,6 +17,7 @@ export const textLang = {
     projects_section_fullstack: "Fullstack",
     projects_section_search_placeholder: "Buscar por linguagem ou ferramenta",
     footer_rights: "© Todos os direitos reservados",
+    no_projects_found: "Nenhum projeto encontrado",
   },
   enUS: {
     logo_image_alt: "Vitor Lichoti",
@@ -36,5 +37,6 @@ export const textLang = {
     projects_section_fullstack: "Fullstack",
     projects_section_search_placeholder: "Search by language or tool",
     footer_rights: "© All rights reserved",
+    no_projects_found: "No projects found",
   }
 }
