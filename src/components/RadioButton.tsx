@@ -3,21 +3,48 @@ import { FilterParams } from "./Projects";
 
 interface RadioButtonProps {
   label: string;
+  selectedValue: string;
   changeFilterParams: Dispatch<SetStateAction<FilterParams>>;
+  setSelectedValue: Dispatch<SetStateAction<string>>;
 }
 
-export default function RadioButton({ label, changeFilterParams }: RadioButtonProps) {
-  const handleChangeRadio = (e: React.MouseEvent<HTMLInputElement, MouseEvent>) => {
-    const target = e.target as HTMLInputElement;
+export default function RadioButton({
+  label,
+  selectedValue,
+  changeFilterParams,
+  setSelectedValue
+}: RadioButtonProps) {
+  const isSelected = selectedValue === label || (selectedValue === '' && label === 'Todos');
+
+  const handleChangeRadio = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSelectedValue(e.target.value); 
     changeFilterParams((prev) => ({
       ...prev,
-      stack: target.value
+      stack: e.target.value,
     }));
-  }
+  };
 
   return (
-    <label >
-      <input onClick={(e) => handleChangeRadio(e)} type="radio" name="language" value={label === 'Todos' ? '' : label} style={{marginRight: '5pxgit a'}} />
+    <label
+      style={{
+        display: 'inline-block',
+        marginRight: '5px',
+        textDecoration: isSelected ? 'underline' : 'none',
+        textDecorationColor: isSelected ? '#646348' : 'transparent',
+        textDecorationThickness: isSelected ? '3px' : '0px',
+        textDecorationSkip: 'spaces',
+        cursor: 'pointer',
+      }}
+      className="text-yellow-50 opacity-70"
+    >
+      <input
+        checked={isSelected}
+        onChange={(e) => handleChangeRadio(e)}
+        type="radio"
+        name="language"
+        value={label === 'Todos' ? '' : label}
+        className="appearance-none"
+      />
       {label}
     </label>
   );

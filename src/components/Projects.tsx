@@ -15,13 +15,9 @@ export default function Projects() {
       framework: ''
     }
   )
-
-  useEffect(() => {
-    console.log(filterParams);
-  }, [filterParams])
   
   return (
-    <div style={{marginLeft: '20px', marginRight: '20px', width: 'auto', marginBottom: '20px'}}>
+    <div>
       <ProjectFiltersWrapper setFilterParams={setFilterParams} />
 
       <ProjectsGrid paramsKey={filterParams}/>

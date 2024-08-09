@@ -13,22 +13,22 @@ export default function ProjectsGrid({ paramsKey }: ProjectsGridProps) {
   const filteredProjects = projects.filter((project: projectType) => {
     const { stack, framework } = paramsKey
     const projectStacks = project.stacks
-    const projectFrameworks = project.frameworks
-
-    console.log(paramsKey);
-    
+    const projectFrameworks = project.frameworks    
 
     if (stack === '' && framework === '') {
       return project
+    } else if (stack == '' && framework !== '') {
+      return projectFrameworks.includes(framework)
+    } else if (stack !== '' && framework === '') {
+      return projectStacks.includes(stack)
+    } else {
+      return projectStacks.includes(stack) && projectFrameworks.includes(framework)
     }
 
-    if (projectStacks.includes(stack) || projectFrameworks.includes(framework)) {
-      return project
-    }
   })
 
   return (
-    <div style={{ display: 'flex', width: 'auto', flexWrap: 'wrap', gap: 3, justifyContent: 'flex-start', marginTop: '30px' }}>
+    <div style={{display: 'flex', flexWrap: 'wrap', gap: 3, justifyContent: 'flex-start', marginTop: '30px' }}>
       {
         filteredProjects.length > 0 ? (
           filteredProjects.map((project, index) => (

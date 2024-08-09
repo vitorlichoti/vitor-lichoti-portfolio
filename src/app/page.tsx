@@ -5,8 +5,8 @@ import samurai from "../../public/samurai.png";
 
 import { textLang } from "../../public/locales/global";
 import ProgramingLanguages from "@/components/ProgramingLanguages";
-import ProjectFiltersWrapper from "@/components/ProjectFiltersWrapper";
 import Projects from "@/components/Projects";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   
@@ -36,14 +36,13 @@ export default function Home() {
       <section className="ml-20 mr-20 mt-40"> 
         <div className="inline-flex justify-center w-full">
           <div className="content-end" style={{width: '500px'}}>
-            <h1 className="text-4xl text-center font-bold text-yellow-100 opacity-70">{textLang['ptBr'].projects_section_title}</h1>
+            <h1 id="projects" className="text-4xl text-center font-bold text-yellow-100 opacity-70">{textLang['ptBr'].projects_section_title}</h1>
           </div>
         </div>
-
-        <div>
-          <Projects />
-        </div>
+        <Projects />
       </section>
+
+      <Footer />
     </div>
   );
 }
