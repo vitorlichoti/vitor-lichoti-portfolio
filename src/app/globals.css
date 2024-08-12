@@ -59,3 +59,25 @@ body {
     text-wrap: balance;
   }
 }
+
+#imagem-samurai {
+  display: none;
+}
+
+#nav-group {
+  display: none;
+}
+
+
+#header {
+  margin-left: 'auto';
+  margin-right: 'auto';
+}
+
+@media (min-width: 600px) and (orientation: landscape) {
+
+  #imagem-samurai {
+    display: block;
+  }
+
+}

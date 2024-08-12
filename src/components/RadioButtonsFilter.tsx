@@ -11,7 +11,7 @@ export default function RadioButtonsFilter({ label, changeFilterParams }: RadioB
   const [selectedValue, setSelectedValue] = useState('Todos');
   
   return (
-    <div style={{width: 'auto', display: 'flex', justifyContent: 'center', gap: '20px'}}>
+    <div style={{width: 'auto', display: 'flex', justifyContent: 'center', gap: '20px',flexWrap: 'wrap'}}>
       {label.map((item, index) => (
         <RadioButton key={index} label={item} changeFilterParams={changeFilterParams} selectedValue={selectedValue} setSelectedValue={setSelectedValue}/>
       ))}

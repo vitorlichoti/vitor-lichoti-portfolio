@@ -2,6 +2,7 @@ import Image from "next/image";
 import { projectType } from "./mocks/projects";
 
 import samurai from '../../public/herodarkbg.png';
+import bestRecords from '../../public/best-records.png';
 
 interface ProjectCardProps {
   project: projectType
@@ -21,7 +22,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           />
         ))}
       </aside>
-      <Image style={{position: 'absolute', top: 0, left: 0, zIndex: 0, height: '230px'}} src={samurai} alt=""/>
+      <Image style={{position: 'absolute', top: 0, left: 0, zIndex: 0, width: '100%', maxHeight: '228px'}} src={bestRecords} alt=""/>
     </div>
   );
 }

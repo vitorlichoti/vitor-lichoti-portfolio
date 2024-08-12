@@ -22,6 +22,7 @@ export default function Home() {
           </div>
           <Image
             src={samurai}
+            id="imagem-samurai"
             alt="Samurai"
             width={350}
             height={350}

@@ -16,7 +16,7 @@ export default function SelectByFrameWork({ changeFilterParams }: SelectByFrameW
   }
   
   return (
-    <select onChange={handleFilterSelected} style={{backgroundColor: '#646348', borderColor: '#646348', borderRadius: '5px', height: '40px', width: '230px', padding: '5px'}}>
+    <select onChange={handleFilterSelected} style={{backgroundColor: '#646348', borderColor: '#646348', borderRadius: '5px', height: '40px', minWidth: '230px', padding: '5px'}}>
       <option value="">All</option>
       {frameworks.map((item, index) => (
         <option key={index} value={item}>{item}</option>

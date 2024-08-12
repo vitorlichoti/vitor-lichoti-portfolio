@@ -9,7 +9,7 @@ import heroDarkBG from "../../public/herodarkbg.png";
 
 export default function Header() {
   return (
-    <header className="ml-20 mr-20">
+    <header className="ml-20 mr-20" id="header">
       <div className="inline-flex justify-between w-full">
         <div className="px-6 py-4 content-end">
           <ImageLogo />
@@ -29,6 +29,7 @@ export default function Header() {
         layout="fill"
         objectFit="cover"
         className="opacity-70"
+        id="hero-image"
       />
     </header>
   );
